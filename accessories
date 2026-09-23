@@ -2,473 +2,132 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KIMPOOL Accessories - إكسسوارات البلياردو">
-<title>KIMPOOL | Accessories</title>
-
+<title>KIMPOOL — العرض التجاري للمقاهي والأوتيلات</title>
 <style>
-:root{
-  --bg:#05090a;
-  --bg2:#091112;
-  --card:#0b1416;
-  --line:#203033;
-  --green:#00d878;
-  --green2:#08a95f;
-  --gold:#e7b83f;
-  --white:#f7f8f7;
-  --muted:#aab5b5;
-  --shadow:0 18px 50px rgba(0,0,0,.35);
-}
+:root{--bg:#05090a;--card:#0b1416;--line:#203033;--green:#00d878;--gold:#e7b83f;--white:#f7f8f7;--muted:#aab5b5}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:Tahoma,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--white);
-  line-height:1.7;
-}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(1180px,92%);margin:auto}
-
-/* NAV */
-.nav{
-  position:sticky;top:0;z-index:1000;
-  background:rgba(4,8,9,.94);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-.nav-inner{
-  height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px
-}
-.logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:1px}
-.logo-mark{
-  width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;
-  display:grid;place-items:center;color:var(--gold);font-size:18px
-}
-.logo small{display:block;color:var(--gold);font-size:8px;letter-spacing:2px}
-.menu{display:flex;gap:30px;color:#ddd;font-size:14px}
-.menu a:hover{color:var(--gold)}
-.nav-actions{display:flex;align-items:center;gap:14px}
-.icon{font-size:20px;color:#ddd}
-.wa-mini{color:var(--green);font-size:24px}
-
-/* HERO */
-.hero{
-  min-height:570px;
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 15% 60%,rgba(0,216,120,.16),transparent 30%),
-    linear-gradient(90deg,rgba(2,7,8,.15),rgba(2,7,8,.92)),
-    url("https://images.unsplash.com/photo-1612534847738-8c2c5f1d2e3a?auto=format&fit=crop&w=1800&q=85") center/cover;
-}
-.hero:after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(3,7,8,.2),rgba(3,7,8,.8));
-}
-.hero-content{
-  position:relative;z-index:1;min-height:570px;
-  display:flex;align-items:center;justify-content:flex-end
-}
-.hero-copy{width:min(560px,100%);text-align:right}
-.eyebrow{color:var(--gold);font-size:14px;font-weight:bold;margin-bottom:10px}
-.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.08;margin-bottom:20px}
-.hero h1 span{color:var(--gold)}
-.hero p{font-size:18px;color:#ddd;max-width:520px;margin-bottom:30px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{
-  border:1px solid rgba(255,255,255,.7);border-radius:999px;
-  padding:13px 26px;display:inline-flex;align-items:center;gap:9px;
-  cursor:pointer;transition:.25s
-}
-.btn:hover{transform:translateY(-2px)}
-.btn-green{background:var(--green);color:#00150b;border-color:var(--green);font-weight:800}
-.btn-outline{background:rgba(0,0,0,.15);color:#fff}
-.btn-gold{background:var(--gold);color:#151000;border-color:var(--gold);font-weight:800}
-
-/* CATEGORIES */
-.section{padding:58px 0}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}
-.section-title{font-size:30px}
-.section-link{color:var(--green);font-size:14px}
-.categories{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.category{
-  min-height:130px;border:1px solid var(--line);background:linear-gradient(180deg,#0c1618,#081012);
-  border-radius:14px;padding:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;transition:.25s
-}
-.category:hover{border-color:#3a6c5a;transform:translateY(-4px)}
-.cat-icon{font-size:42px;margin-bottom:9px;filter:drop-shadow(0 5px 8px rgba(0,0,0,.5))}
-.category b{font-size:13px}
-
-/* PRODUCTS */
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.product{
-  position:relative;overflow:hidden;background:#0b1315;border:1px solid #203034;
-  border-radius:12px;box-shadow:var(--shadow)
-}
-.product-img{
-  height:235px;display:grid;place-items:center;position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 50% 45%,rgba(0,216,120,.14),transparent 40%),
-    linear-gradient(135deg,#172426,#070c0d)
-}
-.product-img img{width:100%;height:100%;object-fit:cover;opacity:.94}
-.product-body{padding:17px}
-.badge{
-  position:absolute;top:12px;right:12px;background:var(--gold);color:#171000;
-  padding:5px 10px;border-radius:7px;font-size:11px;font-weight:900
-}
-.product h3{font-size:17px;margin-bottom:4px}
-.product p{color:#99a5a5;font-size:12px;margin-bottom:12px}
-.price{font-size:20px;font-weight:900;margin-bottom:12px}
-.order{
-  width:100%;border:0;border-radius:999px;padding:11px;background:var(--green);
-  color:#00170c;font-weight:900;cursor:pointer
-}
-
-/* OFFER */
-.offer{
-  position:relative;overflow:hidden;background:
-  radial-gradient(circle at 20% 50%,rgba(0,216,120,.22),transparent 35%),
-  linear-gradient(90deg,#0a2018,#06100f);
-  border-top:1px solid #1d4235;border-bottom:1px solid #1d4235;
-}
-.offer-inner{min-height:340px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
-.offer-visual{
-  min-height:290px;border-radius:18px;
-  background:
-    radial-gradient(circle at 40% 45%,rgba(0,216,120,.25),transparent 28%),
-    linear-gradient(145deg,#10241e,#070c0d);
-  display:grid;place-items:center;font-size:105px;
-  box-shadow:inset 0 0 80px rgba(0,0,0,.4)
-}
-.offer-copy h2{font-size:36px;color:var(--gold);margin-bottom:5px}
-.offer-copy h3{font-size:18px;margin-bottom:12px}
-.checks{list-style:none;color:#ddd;margin:18px 0}
-.checks li{margin:7px 0}
-.checks li:before{content:"✓";color:var(--green);font-weight:900;margin-left:9px}
-.old{color:#788383;text-decoration:line-through;margin-left:10px}
-.offer-price{font-size:27px;color:var(--gold);font-weight:900;margin-bottom:15px}
-
-/* BENEFITS */
-.benefits{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.benefit{padding:35px 20px;text-align:center;border-left:1px solid var(--line)}
-.benefit:last-child{border-left:0}
-.benefit-icon{font-size:34px;color:var(--gold);margin-bottom:8px}
-.benefit h3{font-size:16px;margin-bottom:4px}
-.benefit p{font-size:12px;color:#9ba6a6}
-
-/* TESTIMONIALS */
-.light-section{background:#f5f5f2;color:#111;padding:55px 0}
-.light-section .section-title{color:#111}
-.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.review{background:white;border-radius:12px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-.person{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.avatar{width:43px;height:43px;border-radius:50%;background:linear-gradient(135deg,#263334,#8f9b9a);display:grid;place-items:center;color:white;font-weight:bold}
-.stars{color:#e8b52f;font-size:13px}
-.review p{font-size:13px;color:#555}
-
-/* FAQ */
-.faq{display:grid;gap:10px;max-width:850px;margin:auto}
-details{border:1px solid var(--line);background:#091113;border-radius:10px;padding:16px 20px}
-summary{cursor:pointer;font-weight:bold;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";float:left;color:var(--gold);font-size:20px}
-details[open] summary:after{content:"−"}
-details p{color:#9da7a7;padding-top:10px;font-size:13px}
-
-/* CTA */
-.final-cta{
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 20% 50%,rgba(0,216,120,.18),transparent 30%),
-    linear-gradient(120deg,#071614,#030708);
-  padding:70px 0;text-align:center
-}
-.final-cta h2{font-size:32px;margin-bottom:8px}
-.final-cta p{color:#aeb9b9;margin-bottom:22px}
-
-/* FOOTER */
-footer{background:#030708;border-top:1px solid var(--line);padding:30px 0;color:#778282}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.footer-logo{color:white;font-weight:900;font-size:22px}
-.social{display:flex;gap:15px;font-size:18px}
-
-/* MOBILE */
-@media(max-width:900px){
-  .menu{display:none}
-  .categories{grid-template-columns:repeat(3,1fr)}
-  .products{grid-template-columns:repeat(2,1fr)}
-  .benefits{grid-template-columns:repeat(2,1fr)}
-  .benefit:nth-child(2){border-left:0}
-  .offer-inner{grid-template-columns:1fr}
-  .offer-visual{min-height:220px}
-}
-@media(max-width:600px){
-  .nav-inner{height:62px}
-  .logo-mark{width:32px;height:32px}
-  .hero,.hero-content{min-height:610px}
-  .hero-content{align-items:end;padding-bottom:55px}
-  .hero h1{font-size:42px}
-  .hero p{font-size:15px}
-  .buttons .btn{width:100%;justify-content:center}
-  .categories{grid-template-columns:repeat(2,1fr)}
-  .products{grid-template-columns:1fr}
-  .product-img{height:260px}
-  .section{padding:45px 0}
-  .section-title{font-size:24px}
-  .benefits{grid-template-columns:1fr 1fr}
-  .benefit{padding:25px 10px}
-  .benefit h3{font-size:13px}
-  .testimonials{grid-template-columns:1fr}
-  .offer-copy h2{font-size:30px}
-  .footer-inner{flex-direction:column;text-align:center}
-}
+body{font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--white);line-height:1.8}
+.page{width:min(820px,94%);margin:auto;padding:40px 0}
+.header{text-align:center;padding:30px 0;border-bottom:2px solid var(--gold);margin-bottom:30px}
+.logo{font-size:34px;font-weight:900;letter-spacing:2px}
+.logo span{color:var(--gold)}
+.tagline{color:var(--muted);margin-top:6px;font-size:14px}
+h1{font-size:26px;color:var(--gold);text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);margin-bottom:28px;font-size:15px}
+.intro{background:linear-gradient(135deg,#0c1a16,#081012);border:1px solid #1d4235;border-radius:14px;padding:22px;margin-bottom:28px;font-size:14.5px;color:#d8e0e0}
+.intro b{color:var(--green)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column}
+.tier.featured{border-color:var(--gold);box-shadow:0 0 25px rgba(231,184,63,.15)}
+.tier-icon{font-size:36px;margin-bottom:8px}
+.tier h2{font-size:18px;color:var(--gold);margin-bottom:4px}
+.tier .for{font-size:11px;color:var(--muted);margin-bottom:12px}
+.tier ul{list-style:none;flex:1}
+.tier li{font-size:12.5px;color:#cfd8d8;padding:5px 0;border-bottom:1px dashed #1a2a2c}
+.tier li:before{content:"✓ ";color:var(--green);font-weight:900}
+.note{font-size:11px;color:var(--muted);text-align:center;margin-top:10px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px}
+.why-item{background:#081012;border:1px solid var(--line);border-radius:12px;padding:16px 10px;text-align:center}
+.why-item .ic{font-size:26px;margin-bottom:6px}
+.why-item b{font-size:12.5px;display:block;margin-bottom:3px}
+.why-item p{font-size:11px;color:var(--muted)}
+.steps{margin-bottom:28px}
+.step{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
+.num{background:var(--green);color:#00150b;font-weight:900;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:15px}
+.step b{font-size:14.5px}
+.step p{font-size:12.5px;color:var(--muted)}
+.cta{background:linear-gradient(120deg,#0a2018,#06100f);border:1px solid #1d4235;border-radius:16px;padding:28px;text-align:center;margin-bottom:24px}
+.cta h2{color:var(--gold);font-size:22px;margin-bottom:8px}
+.cta p{color:#c9d4d4;font-size:14px;margin-bottom:16px}
+.wa-btn{display:inline-block;background:var(--green);color:#00170c;font-weight:900;padding:13px 34px;border-radius:999px;font-size:15px;text-decoration:none}
+.footer{text-align:center;color:#5a6a6a;font-size:11px;padding-top:16px;border-top:1px solid var(--line)}
+@media(max-width:700px){.tiers{grid-template-columns:1fr}.why{grid-template-columns:repeat(2,1fr)}}
 </style>
+<base target="_blank">
 </head>
-
 <body>
+<div class="page">
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="#" class="logo">
-      <div class="logo-mark">♛</div>
-      <div>KIMPOOL<small>BILLIARDS ACCESSORIES</small></div>
-    </a>
+<div class="header">
+  <div class="logo">♛ <span>KIMPOOL</span></div>
+  <div class="tagline">BILLIARDS ACCESSORIES • MAINTENANCE • FULL EQUIPMENT</div>
+</div>
 
-    <nav class="menu">
-      <a href="#home">الرئيسية</a>
-      <a href="#products">جميع المنتجات</a>
-      <a href="#offer">العروض</a>
-      <a href="#contact">تواصل معنا</a>
-    </nav>
+<h1>عرض خاص للمقاهي والأوتيلات 🎱</h1>
+<p class="sub">شريكك المتكامل في عالم البلياردو — من الإكسسوار إلى التجهيز الكامل</p>
 
-    <div class="nav-actions">
-      <span class="icon">⌕</span>
-      <span class="icon">🛒</span>
-      <span class="wa-mini">◉</span>
-    </div>
+<div class="intro">
+  <b>KIMPOOL</b> شركة مغربية متخصصة في كل ما يخص البلياردو. نخدم مع المقاهي والأوتيلات في جميع المدن المغربية: <b>إكسسوارات بالجملة</b>، <b>صيانة دورية</b>، <b>تجهيز كامل</b>، و<b>استبدال الطاولات</b> — كلشي من عند واحد، بجودة مضمونة وأسعار مهنيين.
+</div>
+
+<div class="tiers">
+
+  <div class="tier">
+    <div class="tier-icon">🎱</div>
+    <h2>باقة البداية</h2>
+    <div class="for">للمقاهي الصغيرة والبدايات</div>
+    <ul>
+      <li>كرات بلياردو (16 قطعة)</li>
+      <li>طباشير احترافي</li>
+      <li>مثلث + فرشاة تنظيف</li>
+      <li>قفازات للعب</li>
+      <li>توصيل لجميع المدن</li>
+    </ul>
   </div>
-</header>
 
-<main id="home">
-
-<section class="hero">
-  <div class="container hero-content">
-    <div class="hero-copy">
-      <div class="eyebrow">KIMPOOL ACCESSORIES</div>
-      <h1>إكسسوارات تكمل<br><span>أناقة طاولتك</span></h1>
-      <p>اختار الإكسسوارات المناسبة واستلم طلبك بسهولة داخل المغرب.</p>
-      <div class="buttons">
-        <a class="btn btn-outline" href="#products">تصفح الإكسسوارات ←</a>
-        <a class="btn btn-green" href="#contact">◉ اطلب الآن عبر واتساب</a>
-      </div>
-    </div>
+  <div class="tier featured">
+    <div class="tier-icon">⭐</div>
+    <h2>باقة الاحتراف</h2>
+    <div class="for">للمقاهي النشيطة — الأكثر طلباً</div>
+    <ul>
+      <li>كل ما في باقة البداية</li>
+      <li><b>عقد صيانة شهرية</b> للطاولات</li>
+      <li>أولوية في قطع الغيار</li>
+      <li>أسعار جملة دائمة</li>
+      <li>دعم فني عبر واتساب</li>
+    </ul>
   </div>
-</section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">تصفح حسب الفئة</h2>
-    </div>
-
-    <div class="categories">
-      <a class="category" href="#products"><div class="cat-icon">🎱</div><b>كرات البلياردو</b></a>
-      <a class="category" href="#products"><div class="cat-icon">🎱</div><b>العصي / Queues</b></a>
-      <a class="category" href="#products"><div class="cat-icon">🧤</div><b>القفازات</b></a>
-      <a class="category" href="#products"><div class="cat-icon">△</div><b>مثلثات وترتيب الكرات</b></a>
-      <a class="category" href="#products"><div class="cat-icon">🧹</div><b>أدوات التنظيف والصيانة</b></a>
-      <a class="category" href="#products"><div class="cat-icon">•••</div><b>إكسسوارات أخرى</b></a>
-    </div>
+  <div class="tier">
+    <div class="tier-icon">🏆</div>
+    <h2>باقة الشريك</h2>
+    <div class="for">للأوتيلات والسالونات الكبيرة</div>
+    <ul>
+      <li>تجهيز كامل أو استبدال الطاولات</li>
+      <li>إضاءة احترافية للطاولات</li>
+      <li>صيانة دورية شاملة</li>
+      <li>عرض سعر خاص بالجملة</li>
+      <li>زيارة تقنية مجانية</li>
+    </ul>
   </div>
-</section>
 
-<section class="section" id="products">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">أشهر المنتجات</h2>
-      <a href="#products" class="section-link">عرض الكل ←</a>
-    </div>
+</div>
+<p class="note">💡 الأسعار تُحدد حسب العدد والمدينة — اطلب عرض سعر مخصص لنشاطك</p>
 
-    <div class="products">
+<div class="why">
+  <div class="why-item"><div class="ic">🚚</div><b>توصيل لكل المغرب</b><p>جميع المدن المغربية</p></div>
+  <div class="why-item"><div class="ic">♢</div><b>جودة مضمونة</b><p>منتجات أصلية 100%</p></div>
+  <div class="why-item"><div class="ic">◉</div><b>خدمة سريعة</b><p>رد ومعالجة فورية</p></div>
+  <div class="why-item"><div class="ic">🤝</div><b>شريك دائم</b><p>ماشي غير بائع</p></div>
+</div>
 
-      <article class="product">
-        <div class="product-img">
-          <span class="badge">الأكثر طلباً</span>
-          <img src="https://images.unsplash.com/photo-1629957303749-3d7e0d5f8c5a?auto=format&fit=crop&w=900&q=80" alt="مثلث بلياردو">
-        </div>
-        <div class="product-body">
-          <h3>مثلث احترافي</h3>
-          <p>جودة عالية للاستخدام اليومي</p>
-          <div class="price">180 DH</div>
-          <button class="order" onclick="order('مثلث احترافي')">◉ اطلب الآن</button>
-        </div>
-      </article>
+<div class="steps">
+  <div class="step"><div class="num">1</div><div><b>تواصل معنا عبر واتساب</b><p>قول لينا عدد الطاولات وشنو محتاج</p></div></div>
+  <div class="step"><div class="num">2</div><div><b>نعطيك عرض سعر خاص</b><p>خلال 24 ساعة، مخصص لنشاطك ومدينتك</p></div></div>
+  <div class="step"><div class="num">3</div><div><b>نوصلو ونخدمو</b><p>توصيل سريع + تركيب وصيانة احترافية</p></div></div>
+</div>
 
-      <article class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1580748141549-71748dbe0c7b?auto=format&fit=crop&w=900&q=80" alt="عصا بلياردو">
-        </div>
-        <div class="product-body">
-          <h3>عصا بلياردو احترافية</h3>
-          <p>تصميم متوازن وأداء دقيق</p>
-          <div class="price">650 DH</div>
-          <button class="order" onclick="order('عصا بلياردو احترافية')">◉ اطلب الآن</button>
-        </div>
-      </article>
+<div class="cta">
+  <h2>جاهز ترفع مستوى سالونك؟ 🎱</h2>
+  <p>صيفط لينا "الباقة" اللي مهتم بيها + عدد الطاولات، ونعطيك عرضك في 24 ساعة</p>
+  <a class="wa-btn" href="https://wa.me/212XXXXXXXXX" target="_blank">◉ تواصل معنا عبر واتساب</a>
+</div>
 
-      <article class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1601295452897-4e0c1e5c3e14?auto=format&fit=crop&w=900&q=80" alt="كرات بلياردو">
-        </div>
-        <div class="product-body">
-          <h3>كرات بلياردو (16 قطعة)</h3>
-          <p>جودة ممتازة ولعب أكثر سلاسة</p>
-          <div class="price">450 DH</div>
-          <button class="order" onclick="order('كرات بلياردو 16 قطعة')">◉ اطلب الآن</button>
-        </div>
-      </article>
+<div class="footer">
+  ♛ KIMPOOL — لأن التفاصيل تصنع الفرق<br>
+  © 2026 جميع الحقوق محفوظة
+</div>
 
-      <article class="product">
-        <div class="product-img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80" alt="قفاز بلياردو">
-        </div>
-        <div class="product-body">
-          <h3>قفاز بلياردو</h3>
-          <p>راحة وتحكم أفضل</p>
-          <div class="price">120 DH</div>
-          <button class="order" onclick="order('قفاز بلياردو')">◉ اطلب الآن</button>
-        </div>
-      </article>
-
-      <article class="product">
-        <div class="product-img">
-          <div style="font-size:90px">🧊</div>
-        </div>
-        <div class="product-body">
-          <h3>طباشير بلياردو</h3>
-          <p>تماسك أفضل لعصا البلياردو</p>
-          <div class="price">60 DH</div>
-          <button class="order" onclick="order('طباشير بلياردو')">◉ اطلب الآن</button>
-        </div>
-      </article>
-
-      <article class="product">
-        <div class="product-img">
-          <div style="font-size:90px">🧹</div>
-        </div>
-        <div class="product-body">
-          <h3>طقم تنظيف الطاولة</h3>
-          <p>للمحافظة على طاولتك</p>
-          <div class="price">220 DH</div>
-          <button class="order" onclick="order('طقم تنظيف الطاولة')">◉ اطلب الآن</button>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="offer" id="offer">
-  <div class="container offer-inner">
-    <div class="offer-visual">🎱 🧤 🎱</div>
-    <div class="offer-copy">
-      <h2>عرض البداية</h2>
-      <h3>كل ما تحتاجه للانطلاق في عالم البلياردو</h3>
-      <ul class="checks">
-        <li>كرات بلياردو (16 قطعة)</li>
-        <li>مثلث احترافي</li>
-        <li>عصا بلياردو</li>
-        <li>إكسسوارات أساسية</li>
-      </ul>
-      <div><span class="old">1,200 DH</span> <span class="offer-price">890 DH</span></div>
-      <a class="btn btn-gold" href="#contact">◉ اطلب الآن عبر واتساب</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">علاش تشري منا؟</h2>
-    </div>
-    <div class="benefits">
-      <div class="benefit"><div class="benefit-icon">🚚</div><h3>توصيل داخل المغرب</h3><p>بسرعة وأمان</p></div>
-      <div class="benefit"><div class="benefit-icon">♢</div><h3>جودة مختارة</h3><p>منتجات أصلية ومضمونة</p></div>
-      <div class="benefit"><div class="benefit-icon">◉</div><h3>طلب سريع عبر واتساب</h3><p>بدون تعقيد</p></div>
-      <div class="benefit"><div class="benefit-icon">♧</div><h3>مساعدة في الاختيار</h3><p>نعاونك تختار المناسب</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="light-section">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">ماذا يقول زبائننا؟</h2>
-    </div>
-    <div class="testimonials">
-      <article class="review"><div class="person"><div class="avatar">A</div><div><b>Ahmed Rami</b><div class="stars">★★★★★</div></div></div><p>خدمة رائعة وتواصل محترم. المنتجات وصلت بحالة ممتازة.</p></article>
-      <article class="review"><div class="person"><div class="avatar">K</div><div><b>Karim Benali</b><div class="stars">★★★★★</div></div></div><p>منتجات أصلية واحترافية. التجربة كانت واضحة وسهلة.</p></article>
-      <article class="review"><div class="person"><div class="avatar">Y</div><div><b>Youssef El Idrissi</b><div class="stars">★★★★★</div></div></div><p>الجودة ممتازة والتوصيل كان سريعاً. شكراً لكم!</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">الأسئلة الشائعة</h2>
-    </div>
-    <div class="faq">
-      <details><summary>هل يوجد توصيل لجميع المدن المغربية؟</summary><p>أضف هنا معلومات التوصيل الفعلية الخاصة بمتجرك.</p></details>
-      <details><summary>كم تستغرق مدة التوصيل؟</summary><p>أضف هنا المدة حسب المدن وشركة التوصيل التي تستعملها.</p></details>
-      <details><summary>كيف يمكنني طلب المنتج؟</summary><p>اضغط على زر الطلب عبر واتساب وأرسل اسم المنتج والكمية والمدينة.</p></details>
-      <details><summary>هل يمكنني طلب أكثر من منتج؟</summary><p>نعم، يمكنك إرسال قائمة المنتجات التي تريدها في رسالة واحدة.</p></details>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta" id="contact">
-  <div class="container">
-    <h2>محتاج مساعدة تختار الإكسسوار المناسب؟</h2>
-    <p>تواصل معنا مباشرة عبر واتساب وخلي فريق KIMPOOL يساعدك.</p>
-    <a class="btn btn-green" id="whatsappBtn" href="#" target="_blank">◉ تحدث معنا عبر واتساب</a>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container footer-inner">
-    <div>
-      <div class="footer-logo">♛ KIMPOOL</div>
-      <small>لأن التفاصيل تصنع الفرق</small>
-    </div>
-    <div class="social">f　◎　♪　▶</div>
-    <small>© 2026 KIMPOOL. جميع الحقوق محفوظة.</small>
-  </div>
-</footer>
-
-<script>
-/*
-  IMPORTANT:
-  Replace the number below with your real WhatsApp number.
-  Morocco format example: 212XXXXXXXXX
-*/
-const WHATSAPP_NUMBER = "212712605806";
-
-function order(product){
-  const text = encodeURIComponent("السلام عليكم، بغيت نطلب: " + product);
-  window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank");
-}
-
-document.getElementById("whatsappBtn").href =
-  "https://wa.me/" + WHATSAPP_NUMBER +
-  "?text=" + encodeURIComponent("السلام عليكم، بغيت معلومات على الإكسسوارات المتوفرة.");
-</script>
-
+</div>
 </body>
 </html>
-
